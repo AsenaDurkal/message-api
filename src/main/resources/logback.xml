@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Set the logger level -->
+    <root level="INFO">
+        <!-- Log to console -->
+        <appender-ref ref="XML_FILE"/>
+    </root>
+
+    <!-- Console output configuration -->
+    <appender name="XML_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>C:\Users\Asena\application-log.xml</file>
+        <encoder>
+            <pattern>timestamp;%d{yyyy-MM-dd HH:mm:ss.SSS} logLevel:%p loggerName:%c threadName:%t- logsMessage:%msg%n</pattern>
+        </encoder>
+    </appender>
+</configuration>
